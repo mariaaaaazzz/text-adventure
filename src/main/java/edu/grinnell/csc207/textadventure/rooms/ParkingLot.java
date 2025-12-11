@@ -12,9 +12,9 @@ public class ParkingLot implements Room {
   @Override
   public String getDescription() {
     return
-        "You step into the parking lot. The night feels unnaturally cold.\n"
-      + "Rows of empty cars stretch into the darkness.\n"
-      + "A faint humming noise seems to echo from everywhere and nowhere.\n"
+        "You step into the parking lot. You see a small, dim light flickering in the distance.\n"
+      + "Rows of empty cars surround you, their windows reflecting the faint light.\n"
+      + "A faint humming noise fills the air, sending chills down your spine."
       + "\n"
       + "The building entrance lies to the SOUTH.\n"
       + "\n"
@@ -29,7 +29,7 @@ public class ParkingLot implements Room {
     String arg = command.getArgument();
 
     if (type.equals(CommandType.WAIT)) {
-      System.out.println("You wait. The humming grows louder for a moment, then fades.");
+      System.out.println("You wait. The humming persists, sending shivers down your spine.");
     } else if (type.equals(CommandType.GO)) {
       if (arg.equalsIgnoreCase("south")) {
         System.out.println("You head back toward the building...");

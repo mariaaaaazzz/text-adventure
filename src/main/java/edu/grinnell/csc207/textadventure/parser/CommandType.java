@@ -14,6 +14,6 @@ public class CommandType {
   public static final String ATTACK = "ATTACK";
   public static final String LOOK = "LOOK";
   
-  // Used when the parser cannot understand the command.
+  // when the parser cannot understand the command.
   public static final String UNKNOWN = "UNKNOWN";
 }

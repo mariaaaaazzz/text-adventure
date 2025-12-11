@@ -12,14 +12,14 @@ public class DormRoom implements Room {
   @Override
   public String getDescription() {
     return
-        "You wake up in your dorm room. The air feels wrong.\n"
-      + "The campus is eerily silent, like everyone vanished at once.\n"
+      "You wake up in your dorm room. \n"
+      + "The campus is eerily silent, as if you are abandoned by everyone.\n"
       + "\n"
       + "You can see:\n"
       + "  - Your bed, sheets tangled.\n"
       + "  - The door to the hallway to the north.\n"
       + "\n"
-      + "Maybe you could TRY:\n"
+      + "Maybe you could try:\n"
       + "  - wait\n"
       + "  - go north\n";
   }
@@ -30,18 +30,23 @@ public class DormRoom implements Room {
     String arg = command.getArgument();
 
     if (type.equals(CommandType.WAIT)) {
-      System.out.println("You lie still, listening. The silence presses in. Nothing changes.");
+      System.out.println("You lie still, listening. You almost fall back asleep. Nothing happens.");
+
     } else if (type.equals(CommandType.GO)) {
+
       if (arg.equalsIgnoreCase("north")) {
-        System.out.println("You try the door to the hallway. It creaks ominously but won't quite budge... yet.");
-        // Later: game.setCurrentRoom(new Hallway());
+        System.out.println("You try the door to the hallway." 
+        + "It makes a clicking sound as it unlocks, and you step out into the hall.");
+        
       } else {
         System.out.println("You can't go \"" + arg + "\" from here.");
       }
+
     } else if (type.equals(CommandType.LOOK)) {
       System.out.println(getDescription());
+
     } else {
-      System.out.println("That doesn't seem to do anything in here.");
+      System.out.println("That doesn't seem to do anything.");
     }
   }
 }
