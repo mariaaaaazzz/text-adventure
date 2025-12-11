@@ -19,7 +19,7 @@ public interface Room {
    * Handle a command issued while the player is in this room.
    *
    * @param command the command the player typed
-   * @param game    the overall game state
+   * @param game the overall game state
    */
   void handle(Command command, Game game);
 }
