@@ -1,7 +1,7 @@
 package edu.grinnell.csc207.textadventure.parser;
 
 /**
- * A parsed command with a type and (optional) argument.
+ * A parsed command with a type and argument.
  */
 public class Command {
   private String type;
@@ -10,7 +10,7 @@ public class Command {
   /**
    * Create a new Command.
    *
-   * @param type     the command type (one of CommandType.*)
+   * @param type the command type
    * @param argument the argument, or "" if none
    */
   public Command(String type, String argument) {

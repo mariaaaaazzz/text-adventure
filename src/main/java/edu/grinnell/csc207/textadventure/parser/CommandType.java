@@ -2,7 +2,7 @@ package edu.grinnell.csc207.textadventure.parser;
 
 /**
  * CommandType acts as a collection of constant strings
- * representing all valid command types.
+ * representing all command types.
  */
 public class CommandType {
 

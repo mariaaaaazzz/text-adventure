@@ -5,7 +5,7 @@ import edu.grinnell.csc207.textadventure.parser.Command;
 import edu.grinnell.csc207.textadventure.parser.CommandType;
 
 /**
- * A dark, eerie parking lot where the haunting seems strongest.
+ * A dark, eerie parking lot which has alwasy been your least favorite place in the college.
  */
 public class ParkingLot implements Room {
 

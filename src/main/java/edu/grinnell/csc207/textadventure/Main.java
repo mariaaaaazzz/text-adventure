@@ -7,6 +7,9 @@ import edu.grinnell.csc207.textadventure.parser.Command;
 import edu.grinnell.csc207.textadventure.parser.Parser;
 import edu.grinnell.csc207.textadventure.rooms.DormRoom;
 
+/**
+ * The main class for the text adventure game.
+ */
 public class Main {
 
   public static void main(String[] args) {

@@ -3,7 +3,7 @@ package edu.grinnell.csc207.textadventure.parser;
 import java.util.Scanner;
 
 /**
- * Turns raw user input into Command objects.
+ * Turns user input into Command objects.
  */
 public class Parser {
 
@@ -56,7 +56,7 @@ public class Parser {
       return new Command(CommandType.LOOK, "");
     }
 
-    // Everything else is unknown (for now).
+    // Everything else is unknown
     return new Command(CommandType.UNKNOWN, line);
   }
 }

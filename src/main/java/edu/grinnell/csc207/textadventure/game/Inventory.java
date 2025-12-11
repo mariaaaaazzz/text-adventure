@@ -41,7 +41,9 @@ public class Inventory {
     if (items.isEmpty()) {
       return "empty";
     }
+
     StringBuilder sb = new StringBuilder();
+    
     for (Item item : items) {
       sb.append(item.getName()).append(", ");
     }
