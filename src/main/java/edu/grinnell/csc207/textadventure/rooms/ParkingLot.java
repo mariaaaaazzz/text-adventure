@@ -9,6 +9,14 @@ import edu.grinnell.csc207.textadventure.parser.CommandType;
  */
 public class ParkingLot implements Room {
 
+  private Room south;
+
+
+  public ParkingLot(Room south) {
+    this.south = south;
+  }
+
+
   @Override
   public String getDescription() {
     return
@@ -29,12 +37,13 @@ public class ParkingLot implements Room {
     String arg = command.getArgument();
 
     if (type.equals(CommandType.WAIT)) {
-      System.out.println("You wait. The humming persists, sending shivers down your spine.");
+      System.out.println("You wait. The humming persists, sending shivers down your spine.\n");
     } else if (type.equals(CommandType.GO)) {
       if (arg.equalsIgnoreCase("south")) {
         System.out.println("You head back toward the building...");
-        game.setCurrentRoom(new DormRoom());
+        game.setCurrentRoom(south);
         System.out.println(game.getCurrentRoom().getDescription());
+        System.out.println("As you leave the parking lot, the humming fades away.");
       } else {
         System.out.println("You can't go \"" + arg + "\" from here.");
       }
