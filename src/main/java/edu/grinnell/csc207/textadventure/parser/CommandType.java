@@ -13,7 +13,10 @@ public class CommandType {
   public static final String USE = "USE";
   public static final String ATTACK = "ATTACK";
   public static final String LOOK = "LOOK";
-  
-  // when the parser cannot understand the command.
+
+  public static final String QUIT = "QUIT";
+  public static final String STATUS = "STATUS";
+  public static final String SEE_CLUE = "SEE_CLUE";
+
   public static final String UNKNOWN = "UNKNOWN";
 }

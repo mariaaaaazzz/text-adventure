@@ -6,14 +6,22 @@ package edu.grinnell.csc207.textadventure.game;
 public class Item {
 
   private String name;
+  private boolean weapon;
 
-  /** Create an item with the given name. */
   public Item(String name) {
-    this.name = name;
+    this(name, false);
   }
 
-  /** Get the name of this item. */
+  public Item(String name, boolean weapon) {
+    this.name = name;
+    this.weapon = weapon;
+  }
+
   public String getName() {
     return this.name;
+  }
+
+  public boolean isWeapon() {
+    return this.weapon;
   }
 }
