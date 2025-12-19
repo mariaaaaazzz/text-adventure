@@ -3,6 +3,10 @@
 
 Author: Maria Zhang
 
+## Revisions:
++ Added more rooms and enhance the storyline.
++ Fixed bugs in the interface and ParkingLot.java, Main.java, Room.java.
+
 ## Resources
 
 + Text editor: VS Code 1.101.2
