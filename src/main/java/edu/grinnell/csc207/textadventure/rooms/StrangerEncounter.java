@@ -36,14 +36,14 @@ public class StrangerEncounter implements Room {
     String type = command.getType();
     String arg = command.getArgument();
 
-    // LOOK
+    // look
     if (type.equals(CommandType.LOOK)) {
       System.out.println(getLookDescription());
       System.out.println();
       return;
     }
 
-    // TALK (special behavior: determine zombie)
+    // talk (special behavior: determine zombie)
     if (type.equals(CommandType.TALK)) {
       if (!talked) {
         System.out.println("You cautiously speak to the stranger...");
@@ -66,7 +66,7 @@ public class StrangerEncounter implements Room {
       return;
     }
 
-    // GO (escape)
+    // go escape
     if (type.equals(CommandType.GO)) {
       if (arg.equalsIgnoreCase("south")) {
         System.out.println("You decide not to risk it and slowly back away...");
@@ -80,7 +80,7 @@ public class StrangerEncounter implements Room {
       return;
     }
 
-    // ATTACK (allowed always, punished if weak)
+    // attack (allowed always, punished if weak)
     if (type.equals(CommandType.ATTACK)) {
       boolean hasWeapon = game.getInventory().hasWeapon();
       int health = game.getHealth();
@@ -118,7 +118,7 @@ public class StrangerEncounter implements Room {
       return;
     }
 
-    // DEFAULT
+    // default
     System.out.println("That command does not apply here.");
     System.out.println();
   }

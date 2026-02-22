@@ -5,7 +5,7 @@ import edu.grinnell.csc207.textadventure.parser.Command;
 import edu.grinnell.csc207.textadventure.parser.CommandType;
 
 /**
- * JRC: food room with locked doors and a zombie-release risk.
+ * JRC: food room with locked doors and a zombie risk.
  */
 public class JRC implements Room {
 
@@ -15,7 +15,7 @@ public class JRC implements Room {
   private boolean doorsUnlocked = false;
   private boolean tookFood = false;
 
-  // Zombie door encounter state
+  // Zombie jump scare state
   private boolean zombieEncounterActive = false;
 
   public JRC(Room west) {
@@ -67,15 +67,8 @@ public class JRC implements Room {
       + "\n"
       + "Possible actions:\n"
       + "  - look\n"
-      + "  - wait\n";
-
-    // Only show "use clue" if the player already has all clues
-    if (true) {
-      // We can't access Game here; added in printUnlockedActions instead.
-    }
-
-    actions +=
-        "  - go north / east / south / west\n"
+      + "  - wait\n"
+      + "  - go north / east / south / west\n"
       + "  - status\n";
 
     return actions;
@@ -86,14 +79,14 @@ public class JRC implements Room {
     String type = command.getType();
     String arg = command.getArgument();
 
-    // LOOK
+    // Look
     if (type.equals(CommandType.LOOK)) {
       System.out.println(getLookDescription());
       System.out.println();
       return;
     }
 
-    // WAIT
+    // Wait
     if (type.equals(CommandType.WAIT)) {
       System.out.println("You wait. The air feels stale, like the room is holding its breath.");
       System.out.println();
@@ -163,7 +156,7 @@ public class JRC implements Room {
       return;
     }
 
-    // USE CLUE (only works if doors unlocked and player has all clues)
+    // Use clue (only works if doors unlocked and player has all clues)
     if (type.equals(CommandType.USE)) {
       if (arg.equalsIgnoreCase("clue")) {
         if (!doorsUnlocked) {
@@ -185,7 +178,7 @@ public class JRC implements Room {
       }
     }
 
-    // USE KEY to unlock the doors
+    // Use key to unlock the doors
     if (type.equals(CommandType.USE)) {
       if (arg.equalsIgnoreCase("key")) {
         if (!game.getInventory().hasItem("key")) {
@@ -205,7 +198,7 @@ public class JRC implements Room {
         System.out.println("All three doors unlock.");
         System.out.println();
 
-        // NEW: after unlocking, show door choice UI
+        // after unlocking, show door choice
         if (game.hasAllClues()) {
           System.out.println("You can now use your clue here: use clue");
           System.out.println();
@@ -288,18 +281,18 @@ public class JRC implements Room {
 
   private void printUnlockedActions(Game game) {
     System.out.println("Doors:");
-    System.out.println("  - north: Food Supply");
-    System.out.println("  - east: WARNING (you hear faint scratching)");
-    System.out.println("  - south: Safe Exit");
+    System.out.println(" - north: Food Supply");
+    System.out.println(" - east: WARNING (you hear faint scratching)");
+    System.out.println(" - south: Safe Exit");
     System.out.println();
     System.out.println("Possible actions:");
-    System.out.println("  - look");
-    System.out.println("  - wait");
+    System.out.println(" - look");
+    System.out.println(" - wait");
     if (game.hasAllClues()) {
-      System.out.println("  - use clue");
+      System.out.println(" - use clue");
     }
-    System.out.println("  - go north / east / south / west");
-    System.out.println("  - status");
+    System.out.println(" - go north / east / south / west");
+    System.out.println(" - status");
   }
 
   @Override

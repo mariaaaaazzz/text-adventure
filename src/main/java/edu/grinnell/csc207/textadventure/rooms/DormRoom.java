@@ -6,7 +6,7 @@ import edu.grinnell.csc207.textadventure.parser.Command;
 import edu.grinnell.csc207.textadventure.parser.CommandType;
 
 /**
- * The starting room of the game: your dorm room.
+ * The starting room of the game: dorm room.
  */
 public class DormRoom implements Room {
 

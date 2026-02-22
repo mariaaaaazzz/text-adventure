@@ -3,7 +3,7 @@ package edu.grinnell.csc207.textadventure.parser;
 import java.util.Scanner;
 
 /**
- * Turns user input into Command objects.
+ * Turns input into Commands.
  */
 public class Parser {
 
@@ -51,7 +51,7 @@ public class Parser {
       return new Command(CommandType.LOOK, "");
     }
 
-    // go <dir>
+    // go direction
     if (lower.startsWith("go ")) {
       String arg = line.substring(3).trim();
       if (arg.isEmpty()) {
@@ -60,7 +60,7 @@ public class Parser {
       return new Command(CommandType.GO, arg);
     }
 
-    // talk <something>
+    // talk something
     if (lower.startsWith("talk ")) {
       String arg = line.substring(5).trim();
       if (arg.isEmpty()) {
@@ -82,7 +82,7 @@ public class Parser {
 
 
 
-    // pickup <item>
+    // pickup smth
     if (lower.startsWith("pickup ")) {
       String arg = line.substring(7).trim();
       if (arg.isEmpty()) {
@@ -91,7 +91,7 @@ public class Parser {
       return new Command(CommandType.PICKUP, arg);
     }
 
-    // use <item>
+    // use smth
     if (lower.startsWith("use ")) {
       String arg = line.substring(4).trim();
       if (arg.isEmpty()) {
@@ -100,7 +100,7 @@ public class Parser {
       return new Command(CommandType.USE, arg);
     }
 
-    // attack <something>
+    // attack smth
     if (lower.startsWith("attack ")) {
       String arg = line.substring(7).trim();
       if (arg.isEmpty()) {

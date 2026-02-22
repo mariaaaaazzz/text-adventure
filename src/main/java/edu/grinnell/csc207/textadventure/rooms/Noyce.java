@@ -54,7 +54,7 @@ public class Noyce implements Room {
     String type = command.getType();
     String arg = command.getArgument();
 
-    // WAIT (zombie appears on FIRST wait only)
+    // wait (zombie appears on first wait only)
     if (type.equals(CommandType.WAIT)) {
 
       if (!zombieTriggered) {
@@ -75,14 +75,14 @@ public class Noyce implements Room {
       return;
     }
 
-    // LOOK
+    // look
     if (type.equals(CommandType.LOOK)) {
       System.out.println(getLookDescription());
       System.out.println();
       return;
     }
 
-    // ATTACK zombie
+    // attack zombie
     if (type.equals(CommandType.ATTACK)) {
       if (!arg.equalsIgnoreCase("zombie")) {
         System.out.println("That command does not apply here.");
@@ -167,7 +167,7 @@ public class Noyce implements Room {
       return;
     }
 
-    // TALK default
+    // talk default
     if (type.equals(CommandType.TALK)) {
       System.out.println("You talk to yourself. No one answers.");
       System.out.println();

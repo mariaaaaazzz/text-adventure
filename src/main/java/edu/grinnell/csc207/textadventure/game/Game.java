@@ -173,7 +173,7 @@ public class Game {
     clueFromKistle = false;
     gameOver = false;
 
-    // IMPORTANT: put player back at start
+    // put player back at start
     currentRoom = startingRoom;
   }
 }

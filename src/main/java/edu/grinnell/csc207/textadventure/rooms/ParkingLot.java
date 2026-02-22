@@ -59,14 +59,14 @@ public class ParkingLot implements Room {
     String type = command.getType();
     String arg = command.getArgument();
 
-    // WAIT
+    // wait
     if (type.equals(CommandType.WAIT)) {
       System.out.println("You wait. The humming persists.");
       System.out.println();
       return;
     }
 
-    // LOOK
+    // look
     if (type.equals(CommandType.LOOK)) {
       lookCount++;
 
@@ -89,7 +89,7 @@ public class ParkingLot implements Room {
       return;
     }
 
-    // TALK STRANGER
+    // talk to stranger
     if (type.equals(CommandType.TALK)) {
       if (!arg.equalsIgnoreCase("stranger")) {
         System.out.println("That command does not apply here.");
@@ -118,7 +118,7 @@ public class ParkingLot implements Room {
       return;
     }
 
-    // ATTACK STRANGER
+    // attack stranger
     if (type.equals(CommandType.ATTACK)) {
       if (!arg.equalsIgnoreCase("stranger")) {
         System.out.println("That command does not apply here.");
@@ -150,7 +150,7 @@ public class ParkingLot implements Room {
         return;
       }
 
-      // WIN
+      // win
       System.out.println("You steady yourself and attack.");
       System.out.println("After a violent struggle, the zombie collapses.");
       System.out.println();
@@ -165,13 +165,12 @@ public class ParkingLot implements Room {
       System.out.println("A knife.");
       System.out.println();
 
-      // 🔥 THIS IS THE FIX
       printActions();
       System.out.println();
       return;
     }
 
-    // PICKUP KNIFE
+    // pickup knife
     if (type.equals(CommandType.PICKUP)) {
       if (arg.equalsIgnoreCase("knife") && knifeAvailable && !knifeTaken) {
         System.out.println("You pick up the knife. It feels heavy in your hand.");
@@ -186,7 +185,7 @@ public class ParkingLot implements Room {
       return;
     }
 
-    // GO SOUTH
+    // GO south
     if (type.equals(CommandType.GO)) {
       if (arg.equalsIgnoreCase("south")) {
         if (south == null) {
