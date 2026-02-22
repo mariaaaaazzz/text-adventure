@@ -8,7 +8,6 @@ The game includes:
 - Command parsing
 - Item interactions
 
-The project passed the course autograder suite.
 
 ## Running the Game
 
