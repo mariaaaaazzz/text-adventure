@@ -113,6 +113,8 @@ public class Noyce implements Room {
         System.out.println("You take it. Clue piece found " + game.clueProgressString() + ".");
         System.out.println();
 
+        printActions();
+        System.out.println();
         return;
       }
 

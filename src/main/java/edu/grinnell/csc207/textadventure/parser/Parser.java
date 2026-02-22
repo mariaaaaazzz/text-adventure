@@ -16,7 +16,7 @@ public class Parser {
   public Command nextCommand() {
     System.out.print("> ");
     if (!in.hasNextLine()) {
-      return new Command(CommandType.UNKNOWN, "");
+      return new Command(CommandType.QUIT, "");
     }
 
     String line = in.nextLine().trim();
